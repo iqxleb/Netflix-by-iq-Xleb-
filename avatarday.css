@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bck-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 70vh;
+  z-index: -1;
+  border: none;
+  
+}
+
+.bck {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 20px;
+}
+
+.x{
+  width: 3%;
+  margin-left: 200px;
+  margin-top: 50px;
+  filter: brightness(0);
+  z-index: 99;
+  position: fixed;
+}
+
+.bck-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 10px -40px 30px 70px whitesmoke; 
+  pointer-events: none;
+  border: none;
+}
+
+.avatar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 70vh;
+  padding: 0 0 50px 50px;
+}
+
+.logox{
+    position: absolute;
+    bottom: 10px;
+    left: 200px;
+    filter: brightness(0);
+    width: 300px;
+}
+
+.info{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -50px;
+  left: 200px;
+  gap: 10px;
+}
+
+.qwe{
+  background-color: black;
+  border: none;
+  padding: 5px 10px;
+  color: rgb(200, 200, 200);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.info2{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -170px;
+  left: 200px;
+  margin-right: 500px;
+}
+
+.text{
+  color: black;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+.eur{
+  color: white;
+  font-size: 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(255, 0, 0);
+  padding: 10px 5px;
+  width: 320px;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: all 0.1 ease;
+}
+
+.per{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -280px;
+  left: 200px;
+  margin-right: 500px;
+}
+
+.onn{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -350px;
+  left: 200px;
+  margin-right: 500px;
+}
+
+.only{
+  font-family: sans-serif;
+  color: rgb(56, 56, 56);
+  font-size: medium;
+}
+
+.ot{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -400px;
+  left: 200px;
+  margin-right: 500px;
+  border: 1px solid transparent;
+}
+
+/* АДАПТАТЦИЯ ДЛЯ РАЗНЫХ ДЕВАЙСОВ */
+
+
+/* Адаптатция для ноутбуков и маленьких ПК */
+
+@media (max-width: 1200px) {
+  .bck-container {
+    width: 85%;
+  }
+  
+  .x {
+    margin-left: 100px;
+  }
+  
+  .logo, .info, .info2, .per, .onn, .ot {
+    left: 100px;
+    margin-right: 100px;
+  }
+}
+
+/* Адаптатция для планшетов и крупных мобилок */
+
+@media (max-width: 768px) {
+  .bck-container {
+    width: 95%;
+    height: 60vh;
+  }
+
+  .avatar {
+    height: 60vh;
+  }
+
+  .x {
+    margin-left: 40px;
+    width: 40px;
+  }
+
+  .logo {
+    left: 40px;
+    width: 220px;
+    bottom: 40px;
+  }
+
+  .info, .info2, .per, .onn, .ot {
+    left: 40px;
+    margin-right: 20px;
+  }
+
+  .info { bottom: -40px; }
+  .info2 { bottom: -140px; }
+  .per { bottom: -230px; }
+  .onn { bottom: -290px; }
+  .ot { bottom: -330px; }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .eur {
+    width: 280px;
+    font-size: 20px;
+  }
+}
+
+/* Адаптатция для МОБИЛЬНЫХ ТЕЛЕФОНОВ */
+
+@media (max-width: 480px) {
+  .bck-container {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .bck {
+    border-radius: 0;
+  }
+
+  .x {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 30px;
+  }
+
+  .logo {
+    left: 20px;
+    width: 160px;
+    bottom: 20px;
+  }
+
+  .info, .info2, .per, .onn, .ot {
+    left: 20px;
+    margin-right: 10px;
+  }
+
+  .info { bottom: -30px; }
+  .info2 { bottom: -120px; }
+  .per { bottom: -200px; }
+  .onn { bottom: -260px; }
+  .ot { bottom: -300px; }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .qwe {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .only {
+    font-size: 14px;
+  }
+
+  .eur {
+    width: 100%;
+    max-width: 280px;
+    font-size: 18px;
+    padding: 12px 5px;
+  }
+}
